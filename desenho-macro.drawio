@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-04-05T22:09:35.641Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="13z-5MzpnzQ5mQ2Md7gY" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-05T22:16:19.893Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="tKHpjdZF2TkVIomkn0rU" version="24.2.1" type="github">
   <diagram name="Page-1" id="JDs62F1i7I2hvcydn_wL">
-    <mxGraphModel dx="3434" dy="3778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="3027" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -101,14 +101,6 @@
         </mxCell>
         <mxCell id="YiA10wsrFc_IZeT9O3SP-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" edge="1" parent="1" source="YiA10wsrFc_IZeT9O3SP-100" target="YiA10wsrFc_IZeT9O3SP-104">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YiA10wsrFc_IZeT9O3SP-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;curved=1;" edge="1" parent="1" source="YiA10wsrFc_IZeT9O3SP-111">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="330" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YiA10wsrFc_IZeT9O3SP-111" value="&lt;div&gt;Refinar o que é esse tratamento&lt;/div&gt;&lt;div&gt;Acho que é remover o outliers e remoção de dados que não fazem sentido&lt;br&gt;&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="-260" y="590" width="200" height="170" as="geometry" />
         </mxCell>
         <mxCell id="YiA10wsrFc_IZeT9O3SP-114" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" edge="1" parent="1" source="YiA10wsrFc_IZeT9O3SP-11" target="YiA10wsrFc_IZeT9O3SP-113">
           <mxGeometry relative="1" as="geometry">
