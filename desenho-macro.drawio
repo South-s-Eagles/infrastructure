@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-05T22:27:03.498Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="gsbTygm9qI0M5cPqelfh" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-05T22:27:58.484Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="vEHed1GlRJuj006X1nZx" version="24.2.1" type="github">
   <diagram name="Page-1" id="JDs62F1i7I2hvcydn_wL">
     <mxGraphModel dx="2153" dy="3062" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -86,6 +86,25 @@
         </mxCell>
         <mxCell id="YiA10wsrFc_IZeT9O3SP-106" value="&lt;div&gt;Client&lt;/div&gt;&lt;div&gt;Dados com valor, ou seja, tratamentos dos dados&lt;/div&gt;&lt;div&gt;metrificados&lt;br&gt;&lt;/div&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="YiA10wsrFc_IZeT9O3SP-55">
           <mxGeometry x="836" y="800" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="YiA10wsrFc_IZeT9O3SP-261" value="&lt;div&gt;Esses valores não tem &lt;br&gt;&lt;/div&gt;&lt;div&gt;um sentido&lt;/div&gt;&lt;div&gt;é só um valor x que criamos podemos pensar em outras formas de fazer esse trigger&lt;br&gt;&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="YiA10wsrFc_IZeT9O3SP-55">
+          <mxGeometry x="516" y="180" width="200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="YiA10wsrFc_IZeT9O3SP-262" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.07;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;curved=1;" edge="1" parent="YiA10wsrFc_IZeT9O3SP-55" source="YiA10wsrFc_IZeT9O3SP-85" target="YiA10wsrFc_IZeT9O3SP-261">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="486" y="415" />
+              <mxPoint x="486" y="248" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YiA10wsrFc_IZeT9O3SP-263" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.909;entryY=0.407;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;curved=1;" edge="1" parent="YiA10wsrFc_IZeT9O3SP-55" source="YiA10wsrFc_IZeT9O3SP-97" target="YiA10wsrFc_IZeT9O3SP-261">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="786" y="403" />
+              <mxPoint x="786" y="249" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="YiA10wsrFc_IZeT9O3SP-59" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Simulador&lt;br&gt;&lt;/h1&gt;&lt;p&gt;Pegando os dados a cada 2 minutos &lt;br&gt;&lt;/p&gt;&lt;p&gt;máximo: 20kbytes&lt;/p&gt;&lt;p&gt;2 minutos máximo de intervalor&lt;/p&gt;&lt;p&gt;redução de bateria de 0.01 a cada transmissão&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" vertex="1" parent="1">
           <mxGeometry x="-570" y="303" width="180" height="207" as="geometry" />
