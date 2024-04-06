@@ -138,6 +138,18 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub ${AWS::StackName}-${Client}
+  S3Bucket1:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: raw-souths-eagle-ivan
+  S3Bucket2:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: trusted-souths-eagle-ivan
+  S3Bucket3:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: client-souths-eagle-ivan
   Instance:
     DependsOn: [RouteTableAssociationPublicSubnet, InstanceSecurityGroup]
     Type: AWS::EC2::Instance
