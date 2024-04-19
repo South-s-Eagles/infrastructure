@@ -1,6 +1,6 @@
-<mxfile modified="2024-04-19T23:08:32.115Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="2kswGm7_nVH6rDpnnwDZ" version="24.2.7" type="github">
+<mxfile modified="2024-04-19T23:08:46.876Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" etag="7ZCPUGme4ocWyIyQX9du" version="24.2.7" type="github">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
-    <mxGraphModel dx="2073" dy="1958" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3015" dy="2472" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -70,7 +70,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="g7OZx259YmDq5c4rlB1h-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Sensores&lt;/font&gt;&lt;/b&gt;" style="verticalLabelPosition=bottom;aspect=fixed;html=1;shape=mxgraph.salesforce.iot2;" vertex="1" parent="1">
-          <mxGeometry x="720" y="-440" width="70" height="70" as="geometry" />
+          <mxGeometry x="680" y="-500" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="g7OZx259YmDq5c4rlB1h-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="g7OZx259YmDq5c4rlB1h-7" target="g7OZx259YmDq5c4rlB1h-2">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="g7OZx259YmDq5c4rlB1h-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#A9C4EB;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="360" y="-240" width="780" height="290" as="geometry" />
