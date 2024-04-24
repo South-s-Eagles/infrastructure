@@ -1,4 +1,4 @@
-<mxfile modified="2024-04-24T23:01:14.632Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="DK6bKk1D5J8ja4bEM5vp" version="24.2.2" type="github">
+<mxfile modified="2024-04-24T23:07:50.508Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="h-Jdy5jVy6ImzaE55j3E" version="24.2.2" type="github" pages="2">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="1776" dy="1486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -340,6 +340,29 @@
               <mxPoint x="3825" y="810" />
             </Array>
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="zGUwkwxfNT13JOLZKEQm" name="Métricas">
+    <mxGraphModel dx="1120" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-1" value="Nível de cortisol" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-2" value="Nível de glicose" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-3" value="Frequencia da onda" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-4" value="BPM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-5" value="Temperatura" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="100" width="140" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
