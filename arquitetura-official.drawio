@@ -1,4 +1,4 @@
-<mxfile modified="2024-04-24T23:54:00.535Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="39kB2EtOOzcSCB87QL6N" version="24.2.2" type="github" pages="2">
+<mxfile modified="2024-04-25T00:05:15.094Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="tf6eCpEeBSV5TqXAwX7d" version="24.2.2" type="github" pages="2">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="1776" dy="1486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -345,7 +345,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="zGUwkwxfNT13JOLZKEQm" name="Métricas">
-    <mxGraphModel dx="1120" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1730" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -364,23 +364,17 @@
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-5" value="Temperatura" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="820" y="100" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tFG_LMOxLLLCNSlSDSAY-7" value="49 MGDC" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="180" width="140" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tFG_LMOxLLLCNSlSDSAY-8" value="32 GLICOSE" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="330" y="180" width="140" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-9" value="&lt;div&gt;Estado atual que está&lt;/div&gt;&lt;div&gt;em qual onda está&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="180" width="140" height="60" as="geometry" />
+          <mxGeometry x="500" y="170" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-10" value="Mostrar uma cor diferente dependendo do valor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="660" y="180" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tFG_LMOxLLLCNSlSDSAY-11" value="Stressado" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="260" width="140" height="60" as="geometry" />
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-11" value="Stressado" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="160" y="150" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-12" value="Com foco" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="500" y="250" width="140" height="60" as="geometry" />
+          <mxGeometry x="500" y="240" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-13" value="49" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="660" y="250" width="140" height="60" as="geometry" />
@@ -390,6 +384,18 @@
         </mxCell>
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-15" value="49" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="820" y="250" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-17" value="Qualidade do sono" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-18" value="Bom;ruim;médio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="150" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-35" value="Por dia / momento" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-37" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=10;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="10" width="1080" height="340" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
