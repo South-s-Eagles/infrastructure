@@ -1,4 +1,4 @@
-<mxfile modified="2024-04-25T00:05:15.094Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="tf6eCpEeBSV5TqXAwX7d" version="24.2.2" type="github" pages="2">
+<mxfile modified="2024-04-25T00:07:16.138Z" host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="RUqI6TZ8VGPtw6CHvh4_" version="24.2.2" type="github" pages="2">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
     <mxGraphModel dx="1776" dy="1486" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -382,6 +382,9 @@
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-14" value="Mostrar uma cor diferente dependendo do valor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="820" y="180" width="140" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-37" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=10;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="10" width="1080" height="340" as="geometry" />
+        </mxCell>
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-15" value="49" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="820" y="250" width="140" height="60" as="geometry" />
         </mxCell>
@@ -394,8 +397,35 @@
         <mxCell id="tFG_LMOxLLLCNSlSDSAY-35" value="Por dia / momento" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="-20" y="40" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tFG_LMOxLLLCNSlSDSAY-37" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=10;" vertex="1" parent="1">
-          <mxGeometry x="-50" y="10" width="1080" height="340" as="geometry" />
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-38" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=10;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="390" width="1080" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-39" value="Por semana / mes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="410" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tFG_LMOxLLLCNSlSDSAY-40" target="tFG_LMOxLLLCNSlSDSAY-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-40" value="Qualidade do sono" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-41" value="Bom;ruim;médio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="520" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-42" value="Dia da semana com maior stress" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-44" value="Talvez mostrar se nos ultimos dias ouve melhoras" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="300" width="370" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-46" value="Quarta/quinta" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="140" y="520" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-47" value="Dia da semana com maior stress" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tFG_LMOxLLLCNSlSDSAY-48" value="Quarta/quinta" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="310" y="520" width="140" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
