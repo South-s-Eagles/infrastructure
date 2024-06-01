@@ -1,0 +1,21 @@
+Resources:
+  RawS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: raw-souths-eagle-ivan
+
+  TrustedS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: trusted-souths-eagle-ivan
+
+  ClientS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      BucketName: client-souths-eagle-ivan
+
+  DataPipelineS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: pipeline-airflow-souths-eagle-ivan
