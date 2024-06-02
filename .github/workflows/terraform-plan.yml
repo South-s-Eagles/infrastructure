@@ -2,8 +2,6 @@ name: "Terraform Plan"
 
 on:
   pull_request:
-    paths:
-      - 'ivan-lab/terraform-template/**'
 
 env:
   TF_CLOUD_ORGANIZATION: "souths-eagle"
