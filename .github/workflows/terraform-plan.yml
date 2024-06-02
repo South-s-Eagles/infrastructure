@@ -2,6 +2,8 @@ name: "Terraform Plan"
 
 on:
   pull_request:
+    paths:
+      - '**.tf'
 
 env:
   TF_CLOUD_ORGANIZATION: "souths-eagle"
