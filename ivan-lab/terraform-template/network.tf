@@ -1,8 +1,9 @@
 # Criar a VPC
 resource "aws_vpc" "main" {
-  cidr_block = var.vpc_cidr
+  cidr_block = "10.0.0.0/16"
   tags = {
     Name = "MainVPC"
+    Project = var.project_name
   }
 }
 
@@ -11,35 +12,39 @@ resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
   tags = {
     Name = "MainIGW"
+    Project = var.project_name
   }
 }
 
 # Criar as Subnets
 resource "aws_subnet" "public" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block              = var.public_subnet_cidr
-  availability_zone       = var.public_subnet_zone
+  cidr_block              = "10.0.0.0/24"
+  availability_zone       = "us-east-1a"
   map_public_ip_on_launch = true
   tags = {
     Name = "PublicSubnet"
+    Project = var.project_name
   }
 }
 
 resource "aws_subnet" "private" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = var.private_subnet_cidr
-  availability_zone = var.public_subnet_zone
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-east-1a"
   tags = {
     Name = "PrivateSubnet"
+    Project = var.project_name
   }
 }
 
 resource "aws_subnet" "private_second_zone" {
   vpc_id            = aws_vpc.main.id
-  cidr_block        = var.private_subnet_recover_cidr
-  availability_zone = var.private_subnet_zone
+  cidr_block        = "10.0.2.0/24"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "PrivateSubnet"
+    Project = var.project_name
   }
 }
 
@@ -54,6 +59,7 @@ resource "aws_route_table" "public" {
 
   tags = {
     Name = "PublicRouteTable"
+    Project = var.project_name
   }
 
 }

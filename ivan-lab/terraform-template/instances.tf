@@ -1,6 +1,6 @@
 resource "aws_instance" "spark_instance" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
+  ami           = "ami-0f9fc25dd2506cf6d"
+  instance_type = "t3.small"
   subnet_id     = aws_subnet.public.id
   key_name      = var.key_pair_name
   vpc_security_group_ids = [
@@ -44,6 +44,6 @@ resource "aws_instance" "spark_instance" {
   EOF
 
   tags = {
-    Name = "Spark Instance"
+    Project = var.project_name
   }
 }
