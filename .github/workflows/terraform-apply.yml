@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - './ivan-lab/terraform-template/**'
+      - 'ivan-lab/terraform-template/**'
 
 env:
   TF_CLOUD_ORGANIZATION: "souths-eagle"
