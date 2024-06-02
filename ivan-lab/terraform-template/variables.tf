@@ -4,23 +4,23 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "access_key" {
-  description = "Chave de acesso"
-  type        = string
-  nullable    = false
-}
-
-variable "secret_access_key" {
-  description = "Chave de acesso Secreta"
-  type        = string
-  nullable    = false
-}
-
-variable "session_token" {
-  description = "Token de sessão para estudante"
-  type        = string
-  nullable    = false
-}
+# variable "access_key" {
+#   description = "Chave de acesso"
+#   type        = string
+#   nullable    = false
+# }
+#
+# variable "secret_access_key" {
+#   description = "Chave de acesso Secreta"
+#   type        = string
+#   nullable    = false
+# }
+#
+# variable "session_token" {
+#   description = "Token de sessão para estudante"
+#   type        = string
+#   nullable    = false
+# }
 
 /* #----------- Variaveis da intancia ---------------# */
 # variable "ami_id" {
@@ -43,35 +43,35 @@ variable "session_token" {
 
 
 /* #----------- Variaveis de rede ---------------# */
-variable "vpc_cidr" {
-  description = "CIDR block da VPC"
-  type        = string
-  nullable    = false
-}
-
-variable "public_subnet_cidr" {
-  description = "CIDR block da subnet publica"
-  type        = string
-  nullable    = false
-}
-
-variable "private_subnet_cidr" {
-  description = "CIDR block da subnet privada"
-  type        = string
-  nullable    = false
-}
-
-variable "public_subnet_zone" {
-  description = "Availability zone da subnet publica"
-  type        = string
-  nullable    = false
-}
-
-variable "private_subnet_zone" {
-  description = "Availability zone for the private subnet"
-  type        = string
-  nullable    = false
-}
+# variable "vpc_cidr" {
+#   description = "CIDR block da VPC"
+#   type        = string
+#   nullable    = false
+# }
+#
+# variable "public_subnet_cidr" {
+#   description = "CIDR block da subnet publica"
+#   type        = string
+#   nullable    = false
+# }
+#
+# variable "private_subnet_cidr" {
+#   description = "CIDR block da subnet privada"
+#   type        = string
+#   nullable    = false
+# }
+#
+# variable "public_subnet_zone" {
+#   description = "Availability zone da subnet publica"
+#   type        = string
+#   nullable    = false
+# }
+#
+# variable "private_subnet_zone" {
+#   description = "Availability zone for the private subnet"
+#   type        = string
+#   nullable    = false
+# }
 
 /* #--------------- Envs de segurança --------------#*/
 # variable "stack_name" {
