@@ -1,26 +1,20 @@
-variable "region" {
+variable "AWS_REGION" {
   description = "Região da AWS"
   type        = string
   default     = "us-east-1"
 }
 
-# variable "access_key" {
-#   description = "Chave de acesso"
-#   type        = string
-#   nullable    = false
-# }
-#
-# variable "secret_access_key" {
-#   description = "Chave de acesso Secreta"
-#   type        = string
-#   nullable    = false
-# }
-#
-# variable "session_token" {
-#   description = "Token de sessão para estudante"
-#   type        = string
-#   nullable    = false
-# }
+variable "AWS_ACCESS_KEY_ID" {
+  type = string
+}
+
+variable "AWS_SECRET_ACCESS_KEY" {
+  type = string
+}
+
+variable "AWS_SESSION_TOKEN" {
+  type = string
+}
 
 /* #----------- Variaveis da intancia ---------------# */
 # variable "ami_id" {
