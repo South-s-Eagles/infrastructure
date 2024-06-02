@@ -44,7 +44,7 @@ resource "aws_instance" "spark_instance" {
   EOF
 
   tags = {
-    Name = "Spark Server"
+    Name = "Spark Flask Server"
     Project = var.project_name
   }
 }
