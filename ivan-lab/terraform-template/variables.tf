@@ -28,5 +28,5 @@ variable "AWS_SESSION_TOKEN" {
 variable "key_pair_name" {
   description = "Nome do par de chaves para acesso SSH"
   type        = string
-  default     = "home-ec2-sptech"
+  default     = "souths-eagle"
 }
