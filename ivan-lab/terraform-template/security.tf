@@ -19,6 +19,7 @@ resource "aws_security_group" "http_sg" {
 
   tags = {
     Name = "${var.project_name}-http-sg"
+    Project = var.project_name
   }
 }
 
@@ -43,5 +44,6 @@ resource "aws_security_group" "ssh_sg" {
 
   tags = {
     Name = "${var.project_name}-ssh-sg"
+    Project = var.project_name
   }
 }
