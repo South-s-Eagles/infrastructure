@@ -69,3 +69,25 @@ resource "aws_security_group" "spark_server_sg" {
   }
 
 }
+
+resource "aws_security_group" "allow-all" {
+
+  name        = "${var.project_name}-allow-all"
+  description = "Allow all communication on any protocol"
+  vpc_id      = aws_vpc.main.id
+
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+}
