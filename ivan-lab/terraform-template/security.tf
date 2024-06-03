@@ -51,7 +51,7 @@ resource "aws_security_group" "ssh_sg" {
 resource "aws_security_group" "spark_server_sg" {
 
   name        = "${var.project_name}-spark-server"
-  description = "Permite a comunicação entre o servidor spark - flask"
+  description = "Communication with spark server inside VPC"
   vpc_id      = aws_vpc.main.id
 
   ingress {
@@ -59,7 +59,6 @@ resource "aws_security_group" "spark_server_sg" {
     to_port     = 5000
     protocol    = "tcp"
     cidr_blocks = [aws_vpc.main.cidr_block]
-    description = "Comunicação do servidor apenas dentro da VPC"
   }
 
   egress {
@@ -67,7 +66,6 @@ resource "aws_security_group" "spark_server_sg" {
     to_port     = 5000
     protocol    = "tcp"
     cidr_blocks = [aws_vpc.main.cidr_block]
-    description = "Permite tráfego de saída apenas dentro da VPC"
   }
 
 }
