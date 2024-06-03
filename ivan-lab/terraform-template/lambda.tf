@@ -3,11 +3,17 @@ data "aws_iam_role" "lab_role" {
   name = var.default_role_name
 }
 
+data "aws_s3_object" "trusted_s3_function" {
+  bucket = aws_s3_bucket.trusted
+  key    = "lambda_function.zip"
+}
+
 resource "aws_lambda_function" "trusted_etl_lambda" {
-  function_name = "ProcessTrustedEtl"
+  s3_bucket     = data.aws_s3_object.trusted_s3_function.bucket
+  s3_key        = data.aws_s3_object.trusted_s3_function.key
+  function_name = "ProcessTrustedETL"
   description   = "Função lambda que faz o trigger de um evento de criação do S3 Trusted para o S3 Cliente"
   role          = data.aws_iam_role.lab_role.arn
-  filename      = "../lambda/functions/trusted_trigger_etl/lambda_function.zip"
   handler       = "lambda_function.lambda_handler"
   runtime       = "python3.10"
   architectures = ["x86_64"]
