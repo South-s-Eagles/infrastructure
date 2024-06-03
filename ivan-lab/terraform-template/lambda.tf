@@ -5,7 +5,7 @@ data "aws_iam_role" "lab_role" {
 
 data "aws_s3_object" "trusted_s3_function" {
   bucket = aws_s3_bucket.infra_resources_storage.bucket
-  key    = "lambda_function.zip"
+  key    = "lambda/function/lambda_function.zip"
 }
 
 resource "aws_lambda_function" "trusted_etl_lambda" {
@@ -29,9 +29,26 @@ resource "aws_lambda_function" "trusted_etl_lambda" {
     }
   }
 
+  layers = [aws_lambda_layer_version.py_requests.arn]
+
   tags = {
     Project = var.project_name
   }
 
   depends_on = [aws_security_group.spark_server_sg]
+}
+
+
+/*### ------ Layers ------ ###*/
+data "aws_s3_object" "requests_s3_layer" {
+  bucket = aws_s3_bucket.infra_resources_storage.bucket
+  key    = "lambda/layer/requests.zip"
+}
+
+resource "aws_lambda_layer_version" "py_requests" {
+  s3_bucket           = data.aws_s3_object.requests_s3_layer.bucket
+  s3_key              = data.aws_s3_object.requests_s3_layer.key
+  layer_name          = "py_requests"
+  description         = "Requests lib for python"
+  compatible_runtimes = ["python3.10"]
 }
