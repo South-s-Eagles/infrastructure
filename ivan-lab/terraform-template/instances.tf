@@ -1,8 +1,14 @@
+resource "aws_iam_instance_profile" "emr_ec2_role" {
+  name = "EMR_EC2_DefaultRole"
+  role = "EMR_EC2_DefaultRole"
+}
+
 resource "aws_instance" "spark_instance" {
-  ami           = "ami-0f9fc25dd2506cf6d"
-  instance_type = "t3.small"
-  subnet_id     = aws_subnet.public.id
-  key_name      = var.key_pair_name
+  ami                  = "ami-0f9fc25dd2506cf6d"
+  instance_type        = "t3.small"
+  iam_instance_profile = aws_iam_instance_profile.emr_ec2_role.name
+  subnet_id            = aws_subnet.public.id
+  key_name             = var.key_pair_name
   vpc_security_group_ids = [
     aws_security_group.http_sg.id,
     aws_security_group.ssh_sg.id
