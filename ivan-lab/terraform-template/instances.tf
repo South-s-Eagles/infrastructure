@@ -1,6 +1,5 @@
-resource "aws_iam_instance_profile" "emr_ec2_role" {
+data "aws_iam_role" "emr_ec2_role" {
   name = "EMR_EC2_DefaultRole"
-  role = "EMR_EC2_DefaultRole"
 }
 
 resource "aws_instance" "spark_instance" {
