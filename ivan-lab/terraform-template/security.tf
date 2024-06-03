@@ -68,6 +68,10 @@ resource "aws_security_group" "spark_server_sg" {
     cidr_blocks = [aws_vpc.main.cidr_block]
   }
 
+  tags = {
+    Name    = "${var.project_name}-spark-server-sg"
+    Project = var.project_name
+  }
 }
 
 resource "aws_security_group" "allow-all" {
@@ -90,4 +94,8 @@ resource "aws_security_group" "allow-all" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  tags = {
+    Name    = "${var.project_name}-allow-all-sg"
+    Project = var.project_name
+  }
 }
