@@ -5,7 +5,7 @@ data "aws_iam_role" "emr_ec2_role" {
 resource "aws_instance" "spark_instance" {
   ami                  = "ami-0f9fc25dd2506cf6d"
   instance_type        = "t3.small"
-  iam_instance_profile = aws_iam_instance_profile.emr_ec2_role.name
+  iam_instance_profile = data.aws_iam_role.emr_ec2_role.name
   subnet_id            = aws_subnet.public.id
   key_name             = var.key_pair_name
   vpc_security_group_ids = [
