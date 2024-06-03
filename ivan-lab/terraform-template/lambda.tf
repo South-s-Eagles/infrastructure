@@ -4,7 +4,7 @@ data "aws_iam_role" "lab_role" {
 }
 
 data "aws_s3_object" "trusted_s3_function" {
-  bucket = aws_s3_bucket.trusted.bucket
+  bucket = aws_s3_bucket.infra_resources_storage.bucket
   key    = "lambda_function.zip"
 }
 
