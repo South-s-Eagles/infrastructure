@@ -1,12 +1,16 @@
 from flask import Flask, request, jsonify
-import subprocess
+import boto3
 import logging
+import json
 from pyspark.sql import SparkSession
 from pyspark import SparkConf
 from pyspark.sql.functions import udf
 from pyspark.sql.types import StringType
 
-DESTINY_BUCKET_KEY = "client-souths-eagle-ivan/simulador"
+DESTINY_BUCKET = "client-souths-eagle-ivan"
+
+# S3 Configuration
+s3 = boto3.client('s3')
 
 # Spark configuration
 conf = SparkConf()
@@ -37,6 +41,12 @@ def categorizar_frequencia(hz):
     else:
         return "outro"
 
+def transform_data_frame_into_json(df):
+    json_rdd = df.toJSON()
+    json_list = json_rdd.collect()
+    json_objects = [json.loads(json_str) for json_str in json_list]
+    return json.dumps(json_objects, indent=2)
+
 @app.route("/process", methods=["POST"])
 def process_file():
 
@@ -54,11 +64,15 @@ def process_file():
     df_selecionado = df.select("dispositivoId", "dispositivo", "valor")
     categorizar_frequencia_udf = udf(categorizar_frequencia, StringType())
     df_formatado = df_selecionado.withColumn("tipo_frequencia", categorizar_frequencia_udf(df_selecionado.valor))
+    json_data = transform_data_frame_into_json(df_formatado)
 
-    try:
-        df_formatado.write.json(f's3a://{DESTINY_BUCKET_KEY}/{file_key}')
-    except Exception as ex:
-        logger.error(f"Não foi possível colocar o arquivo {file_key} no bucket {DESTINY_BUCKET_KEY}", ex)
+    s3.put_object(
+            Bucket=DESTINY_BUCKET,
+            Key=file_key,
+            Body=(bytes(json_data.encode('UTF-8')))
+    )
+
+    logger.info("Dado tratado enviado para o S3")
 
     return jsonify({"message": "Processamento realizado pelo Spark."})
 
