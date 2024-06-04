@@ -24,6 +24,18 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# TODO: Tirar esse negócio estranho daqui depois
+def categorizar_frequencia(hz):
+    if 4 <= hz < 8:
+        return "teta"
+    elif 8 <= hz < 12:
+        return "alpha"
+    elif 12 <= hz < 30:
+        return "beta"
+    elif 30 <= hz < 40:
+        return "gamma"
+    else:
+        return "outro"
 
 @app.route("/process", methods=["POST"])
 def process_file():
@@ -54,15 +66,3 @@ def process_file():
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 
-
-def categorizar_frequencia(hz):
-    if 4 <= hz < 8:
-        return "teta"
-    elif 8 <= hz < 12:
-        return "alpha"
-    elif 12 <= hz < 30:
-        return "beta"
-    elif 30 <= hz < 40:
-        return "gamma"
-    else:
-        return "outro"
