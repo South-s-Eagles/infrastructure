@@ -25,7 +25,7 @@ resource "aws_lambda_function" "trusted_etl_lambda" {
 
   environment {
     variables = {
-      SPARK_ENDPOINT = "http://${aws_instance.spark_instance.private_ip}"
+      SPARK_ENDPOINT = "http://${aws_instance.spark_instance.private_ip}:5000/process"
     }
   }
 

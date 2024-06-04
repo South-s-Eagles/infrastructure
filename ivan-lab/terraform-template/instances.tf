@@ -10,12 +10,14 @@ resource "aws_instance" "spark_instance" {
   key_name             = var.key_pair_name
   vpc_security_group_ids = [
     aws_security_group.http_sg.id,
-    aws_security_group.ssh_sg.id
+    aws_security_group.ssh_sg.id,
+    aws_security_group.spark_server_sg.id
   ]
   depends_on = [
     aws_route_table_association.public_subnet_association,
     aws_security_group.http_sg,
-    aws_security_group.ssh_sg
+    aws_security_group.ssh_sg,
+    aws_security_group.spark_server_sg
   ]
   user_data = <<-EOF
     #!/bin/bash
