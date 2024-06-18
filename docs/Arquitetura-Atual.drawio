@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-18T22:38:46.235Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="-b_nNwF90mjgZrLztBb4" version="24.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-18T22:39:47.559Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="3HXVKcrJjvnbUOD5D6Ys" version="24.5.5" type="github">
   <diagram name="Page-1" id="XfDByWe0Ui9NYDcHxnH0">
-    <mxGraphModel dx="1724" dy="1392" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="615" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -140,7 +140,7 @@
         <mxCell id="tQBoGrWTImrQLZTMkDLJ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tQBoGrWTImrQLZTMkDLJ-5" target="PAr_KQbNL_9ZnV86c4YG-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tQBoGrWTImrQLZTMkDLJ-5" value="S3Trusted" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+        <mxCell id="tQBoGrWTImrQLZTMkDLJ-5" value="S3Client" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
           <mxGeometry x="2590" y="796.08" width="78" height="78" as="geometry" />
         </mxCell>
         <mxCell id="tQBoGrWTImrQLZTMkDLJ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PAr_KQbNL_9ZnV86c4YG-34" target="tQBoGrWTImrQLZTMkDLJ-5">
