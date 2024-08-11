@@ -4,8 +4,9 @@ import logging
 import json
 from pyspark.sql import SparkSession
 from pyspark import SparkConf
-from pyspark.sql.functions import udf
+from pyspark.sql.functions import udf, col
 from pyspark.sql.types import StringType
+import base64
 
 DESTINY_BUCKET = "client-souths-eagle-ivan"
 
@@ -41,6 +42,10 @@ def categorizar_frequencia(hz):
     else:
         return "outro"
 
+def decode_base64(encoded_str):
+    decoded_bytes = base64.b64decode(encoded_str)
+    return decoded_bytes.decode('utf-8')
+
 def transform_data_frame_into_json(df):
     json_rdd = df.toJSON()
     json_list = json_rdd.collect()
@@ -61,7 +66,14 @@ def process_file():
     logger.info(f"Recebida solicitação para processar arquivo {file_path} para o Bucket")
 
     df = spark.read.json(file_path)
-    df_selecionado = df.select("dispositivoId", "dispositivo", "valor")
+
+    decode_base64_udf = udf(decode_base64, StringType())
+
+    df_decoded = df.withColumn("decoded_body", decode_base64_udf(col("Body")))
+
+    df_decoded_json = spark.read.json(df_decoded.select("decoded_body").rdd.map(lambda r: r.decoded_body))
+
+    df_selecionado = df_decoded_json.select("dispositivoId", "dispositivo", "valor")
     categorizar_frequencia_udf = udf(categorizar_frequencia, StringType())
     df_formatado = df_selecionado.withColumn("tipo_frequencia", categorizar_frequencia_udf(df_selecionado.valor))
     json_data = transform_data_frame_into_json(df_formatado)
