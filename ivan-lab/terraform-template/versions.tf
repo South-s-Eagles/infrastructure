@@ -1,13 +1,13 @@
 terraform {
   required_version = "~> 1.0"
 
-  cloud {
-    organization = "souths-eagle"
-
-    workspaces {
-      name = "souths-eagle-infra-ivan"
-    }
-  }
+  # cloud {
+  #   organization = "souths-eagle"
+  #
+  #   workspaces {
+  #     name = "souths-eagle-infra-ivan"
+  #   }
+  # }
 
   required_providers {
     aws = {

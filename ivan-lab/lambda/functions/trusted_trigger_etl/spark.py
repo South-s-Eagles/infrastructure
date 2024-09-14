@@ -11,7 +11,7 @@ import base64
 DESTINY_BUCKET = "client-souths-eagle-ivan"
 
 # S3 Configuration
-s3 = boto3.client('s3')
+s3 = boto3.client("s3")
 
 # Spark configuration
 conf = SparkConf()
@@ -29,6 +29,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+
 # TODO: Tirar esse negócio estranho daqui depois
 def categorizar_frequencia(hz):
     if 4 <= hz < 8:
@@ -42,9 +43,11 @@ def categorizar_frequencia(hz):
     else:
         return "outro"
 
+
 def decode_base64(encoded_str):
     decoded_bytes = base64.b64decode(encoded_str)
-    return decoded_bytes.decode('utf-8')
+    return decoded_bytes.decode("utf-8")
+
 
 def transform_data_frame_into_json(df):
     json_rdd = df.toJSON()
@@ -52,9 +55,9 @@ def transform_data_frame_into_json(df):
     json_objects = [json.loads(json_str) for json_str in json_list]
     return json.dumps(json_objects, indent=2)
 
+
 @app.route("/process", methods=["POST"])
 def process_file():
-
     logger.info(f"Request to process ETL")
 
     data = request.json
@@ -63,7 +66,9 @@ def process_file():
     file_key = data["filePath"]
     file_path = f"s3a://{bucket_name}/{file_key}"
 
-    logger.info(f"Recebida solicitação para processar arquivo {file_path} para o Bucket")
+    logger.info(
+        f"Recebida solicitação para processar arquivo {file_path} para o Bucket"
+    )
 
     df = spark.read.json(file_path)
 
@@ -71,17 +76,19 @@ def process_file():
 
     df_decoded = df.withColumn("decoded_body", decode_base64_udf(col("Body")))
 
-    df_decoded_json = spark.read.json(df_decoded.select("decoded_body").rdd.map(lambda r: r.decoded_body))
+    df_decoded_json = spark.read.json(
+        df_decoded.select("decoded_body").rdd.map(lambda r: r.decoded_body)
+    )
 
     df_selecionado = df_decoded_json.select("dispositivoId", "dispositivo", "valor")
     categorizar_frequencia_udf = udf(categorizar_frequencia, StringType())
-    df_formatado = df_selecionado.withColumn("tipo_frequencia", categorizar_frequencia_udf(df_selecionado.valor))
+    df_formatado = df_selecionado.withColumn(
+        "tipo_frequencia", categorizar_frequencia_udf(df_selecionado.valor)
+    )
     json_data = transform_data_frame_into_json(df_formatado)
 
     s3.put_object(
-            Bucket=DESTINY_BUCKET,
-            Key=file_key,
-            Body=(bytes(json_data.encode('UTF-8')))
+        Bucket=DESTINY_BUCKET, Key=file_key, Body=(bytes(json_data.encode("UTF-8")))
     )
 
     logger.info("Dado tratado enviado para o S3")
@@ -91,4 +98,3 @@ def process_file():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
-
