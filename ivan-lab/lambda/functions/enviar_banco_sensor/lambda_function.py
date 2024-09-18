@@ -3,7 +3,7 @@ import json
 from pymongo import MongoClient
 
 # Conectar ao MongoDB fora do handler
-client = MongoClient("mongodb://")
+client = MongoClient("mongodb://:/")
 
 
 def lambda_handler(event, context):
@@ -13,18 +13,19 @@ def lambda_handler(event, context):
 
         # Acessar mensagem do evento SNS
 
-        message = event["requestPayload"]["Records"][0]["Sns"]["Message"]
-
-        message_str = json.loads(message)
-        message_data = json.loads(message_str)
-        print("Mensagem convertida: ", message_data)
+        body = event["Records"][0]["body"]
+        message_data = json.loads(body)
+        sns_message = json.loads(
+            message_data["requestPayload"]["Records"][0]["Sns"]["Message"]
+        )
+        print("Mensagem convertida: ", sns_message)
 
         # Conectar ao banco e coleção
         db = client.aguias
         collection = db.sensores
 
         # Inserir documento
-        result = collection.insert_one(message_data)
+        result = collection.insert_one(json.loads(sns_message))
 
         if result.inserted_id:
             return {"statusCode": 201, "body": "Document inserted successfully"}
