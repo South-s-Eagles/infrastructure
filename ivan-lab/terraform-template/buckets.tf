@@ -38,6 +38,7 @@ resource "aws_s3_bucket" "infra_resources_storage" {
   }
 }
 
+
 resource "aws_s3_bucket" "laudo_medico_client" {
   bucket = "infra-resources-souths-eagle-ivan"
 
