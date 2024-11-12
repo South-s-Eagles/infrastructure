@@ -1,50 +1,43 @@
-resource "aws_s3_bucket" "raw-souths-eagle-xx" {
-  bucket = "raw-souths-eagle-ivan"
+resource "aws_s3_bucket" "raw" {
+  bucket = "raw-souths-eagle-xx"
 
   tags = {
     Project = var.project_name
   }
 }
 
-resource "aws_s3_bucket" "trusted-souths-eagle-xx" {
-  bucket = "trusted-souths-eagle-ivan"
+resource "aws_s3_bucket" "trusted" {
+  bucket = "trusted-souths-eagle-xx"
 
   tags = {
     Project = var.project_name
   }
 }
 
-resource "aws_s3_bucket" "client-souths-eagle-xx" {
-  bucket = "client-souths-eagle-ivan"
+resource "aws_s3_bucket" "client" {
+  bucket = "client-souths-eagle-xx"
 
   tags = {
     Project = var.project_name
   }
 }
 
-resource "aws_s3_bucket" "pipeline-airflow-souths-eagle-xx" {
-  bucket = "pipeline-airflow-souths-eagle-ivan"
+resource "aws_s3_bucket" "data_pipeline" {
+  bucket = "pipeline-airflow-souths-eagle-xx"
 
   tags = {
     Project = var.project_name
   }
 }
 
-resource "aws_s3_bucket" "infra-resources-souths-eagle-xx" {
-  bucket = "infra-resources-souths-eagle-ivan"
+resource "aws_s3_bucket" "infra_resources_storage" {
+  bucket = "infra-resources-souths-eagle-xx"
 
   tags = {
     Project = var.project_name
   }
 }
 
-resource "aws_s3_bucket" "laudo_medico_client" {
-  bucket = "infra-resources-souths-eagle-ivan"
-
-  tags = {
-    Project = var.project_name
-  }
-}
 
 /*##--------- Buckets Permission --------*/
 resource "aws_lambda_permission" "lambda-trusted-s3-permission" {
