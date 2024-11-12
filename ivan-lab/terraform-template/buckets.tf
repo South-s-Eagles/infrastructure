@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "raw" {
+resource "aws_s3_bucket" "raw-souths-eagle-xx" {
   bucket = "raw-souths-eagle-ivan"
 
   tags = {
@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "raw" {
   }
 }
 
-resource "aws_s3_bucket" "trusted" {
+resource "aws_s3_bucket" "trusted-souths-eagle-xx" {
   bucket = "trusted-souths-eagle-ivan"
 
   tags = {
@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "trusted" {
   }
 }
 
-resource "aws_s3_bucket" "client" {
+resource "aws_s3_bucket" "client-souths-eagle-xx" {
   bucket = "client-souths-eagle-ivan"
 
   tags = {
@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "client" {
   }
 }
 
-resource "aws_s3_bucket" "data_pipeline" {
+resource "aws_s3_bucket" "pipeline-airflow-souths-eagle-xx" {
   bucket = "pipeline-airflow-souths-eagle-ivan"
 
   tags = {
@@ -30,7 +30,7 @@ resource "aws_s3_bucket" "data_pipeline" {
   }
 }
 
-resource "aws_s3_bucket" "infra_resources_storage" {
+resource "aws_s3_bucket" "infra-resources-souths-eagle-xx" {
   bucket = "infra-resources-souths-eagle-ivan"
 
   tags = {
