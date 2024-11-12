@@ -4,6 +4,10 @@ resource "aws_s3_bucket" "raw" {
   tags = {
     Project = var.project_name
   }
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "aws_s3_bucket" "trusted" {
@@ -23,7 +27,7 @@ resource "aws_s3_bucket" "client" {
 }
 
 resource "aws_s3_bucket" "infra_resources_storage" {
-  bucket = "infra-resources-souths-eagle-xx"
+  bucket = "infra-resources-souths-eagle-ivan"
 
   tags = {
     Project = var.project_name
