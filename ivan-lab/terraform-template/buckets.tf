@@ -22,14 +22,6 @@ resource "aws_s3_bucket" "client" {
   }
 }
 
-resource "aws_s3_bucket" "data_pipeline" {
-  bucket = "pipeline-airflow-souths-eagle-xx"
-
-  tags = {
-    Project = var.project_name
-  }
-}
-
 resource "aws_s3_bucket" "infra_resources_storage" {
   bucket = "infra-resources-souths-eagle-xx"
 
