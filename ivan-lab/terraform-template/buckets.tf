@@ -16,6 +16,10 @@ resource "aws_s3_bucket" "trusted" {
   tags = {
     Project = var.project_name
   }
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "aws_s3_bucket" "client" {
@@ -24,13 +28,19 @@ resource "aws_s3_bucket" "client" {
   tags = {
     Project = var.project_name
   }
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 resource "aws_s3_bucket" "infra_resources_storage" {
-  bucket = "infra-resources-souths-eagle-ivan"
+  bucket = "infra-resources-souths-eagle-xx"
 
   tags = {
     Project = var.project_name
+  }
+  lifecycle {
+    prevent_destroy = true
   }
 }
 
