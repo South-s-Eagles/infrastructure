@@ -6,6 +6,14 @@ resource "aws_s3_bucket" "laudo" {
   }
 }
 
+resource "aws_s3_bucket" "demonstration" {
+  bucket = "demonstracao-souths-eagle-xx"
+
+  tags = {
+    Project = var.project_name
+  }
+}
+
 #
 # resource "aws_s3_bucket" "raw" {
 #   bucket = "raw-souths-eagle-xx"
